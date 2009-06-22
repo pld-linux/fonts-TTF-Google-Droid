@@ -7,8 +7,8 @@ Group:		Fonts
 Source0:	google-droid.tar.gz
 # Source0-md5:	db7948a148a065a59c48db27afa16b5d
 Source1:	%{name}-sans.fontconfig
-Source1:	%{name}-sans-mono.fontconfig
-Source1:	%{name}-serif.fontconfig
+Source2:	%{name}-sans-mono.fontconfig
+Source3:	%{name}-serif.fontconfig
 URL:		http://android.git.kernel.org/?p=platform/frameworks/base.git;a=tree;f=data/fonts
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/TTF
@@ -36,8 +36,8 @@ install -d $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
 
 cp -a *.ttf $RPM_BUILD_ROOT%{_ttffontsdir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.avail/65-droid-sans.conf
-install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.avail/60-droid-sans-mono.conf
-install %{SOURCE1} $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.avail/59-droid-serif.conf
+install %{SOURCE2} $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.avail/60-droid-sans-mono.conf
+install %{SOURCE3} $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.avail/59-droid-serif.conf
 ln -s ../conf.avail/65-droid-sans.conf $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
 ln -s ../conf.avail/60-droid-sans-mono.conf $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
 ln -s ../conf.avail/59-droid-serif.conf $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
