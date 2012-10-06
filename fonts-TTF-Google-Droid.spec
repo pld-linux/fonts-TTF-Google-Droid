@@ -1,7 +1,7 @@
 Summary:	General-purpose fonts released by Google as part of Android
 Name:		fonts-TTF-Google-Droid
 Version:	1.0.0.112
-Release:	2
+Release:	3
 License:	Apache v2.0
 Group:		Fonts
 Source0:	google-droid.tar.gz
