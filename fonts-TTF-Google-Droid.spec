@@ -6,7 +6,7 @@ Release:	1.%{snap}.1
 License:	Apache v2.0
 Group:		Fonts
 Source0:	google-droid-fonts-%{snap}.tar.xz
-# Source0-md5:	db7948a148a065a59c48db27afa16b5d
+# Source0-md5:	d5768c1ce591d40375fd622ea68f11f9
 Source1:	getdroid.sh
 Source10:	%{name}-sans.fontconfig
 Source11:	%{name}-sans-mono.fontconfig
