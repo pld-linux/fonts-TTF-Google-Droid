@@ -7,7 +7,7 @@ License:	Apache v2.0
 Group:		Fonts
 Source0:	google-droid-fonts-%{snap}.tar.xz
 # Source0-md5:	d5768c1ce591d40375fd622ea68f11f9
-Source1:	getdroid.sh
+Source1:	get-source.sh
 Source10:	%{name}-sans.fontconfig
 Source11:	%{name}-sans-mono.fontconfig
 Source12:	%{name}-serif.fontconfig
@@ -41,10 +41,10 @@ install -d $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail
 install -d $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
 
 cp -a *.ttf $RPM_BUILD_ROOT%{_ttffontsdir}
-install %{SOURCE10} $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail/65-google-droid-sans.conf
-install %{SOURCE11} $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail/60-google-droid-sans-mono.conf
-install %{SOURCE12} $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail/65-google-droid-serif.conf
-install %{SOURCE13} $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail/65-google-droid-kufi.conf
+cp -p %{SOURCE10} $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail/65-google-droid-sans.conf
+cp -p %{SOURCE11} $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail/60-google-droid-sans-mono.conf
+cp -p %{SOURCE12} $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail/65-google-droid-serif.conf
+cp -p %{SOURCE13} $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail/65-google-droid-kufi.conf
 
 ln -s %{_datadir}/fontconfig/conf.avail/65-google-droid-sans.conf $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
 ln -s %{_datadir}/fontconfig/conf.avail/60-google-droid-sans-mono.conf $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
@@ -62,12 +62,12 @@ fontpostinst TTF
 
 %files
 %defattr(644,root,root,755)
-%{_ttffontsdir}/Droid*.ttf
-%{_datadir}/fontconfig/conf.avail/65-google-droid-serif.conf
-%{_datadir}/fontconfig/conf.avail/60-google-droid-sans-mono.conf
-%{_datadir}/fontconfig/conf.avail/65-google-droid-sans.conf
-%{_datadir}/fontconfig/conf.avail/65-google-droid-kufi.conf
 %{_sysconfdir}/fonts/conf.d/65-google-droid-serif.conf
 %{_sysconfdir}/fonts/conf.d/60-google-droid-sans-mono.conf
 %{_sysconfdir}/fonts/conf.d/65-google-droid-sans.conf
 %{_sysconfdir}/fonts/conf.d/65-google-droid-kufi.conf
+%{_datadir}/fontconfig/conf.avail/65-google-droid-serif.conf
+%{_datadir}/fontconfig/conf.avail/60-google-droid-sans-mono.conf
+%{_datadir}/fontconfig/conf.avail/65-google-droid-sans.conf
+%{_datadir}/fontconfig/conf.avail/65-google-droid-kufi.conf
+%{_ttffontsdir}/Droid*.ttf
