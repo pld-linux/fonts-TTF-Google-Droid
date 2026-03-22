@@ -1,5 +1,5 @@
 %define	snap	20121204
-%define	rel	1
+%define	rel	2
 Summary:	General-purpose fonts released by Google as part of Android
 Name:		fonts-TTF-Google-Droid
 Version:	1.0.2
