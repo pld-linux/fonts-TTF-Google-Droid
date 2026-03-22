@@ -1,8 +1,9 @@
 %define	snap	20121204
+%define	rel	1
 Summary:	General-purpose fonts released by Google as part of Android
 Name:		fonts-TTF-Google-Droid
 Version:	1.0.2
-Release:	1.%{snap}.1
+Release:	1.%{snap}.%{rel}
 License:	Apache v2.0
 Group:		Fonts
 Source0:	google-droid-fonts-%{snap}.tar.xz
